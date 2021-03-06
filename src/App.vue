@@ -1,17 +1,15 @@
 <template lang="pug">
 img(alt='Vue logo', src='./assets/logo.png')
-HelloWorld(msg='Hello Vue 3 + TypeScript + Pug + S(C|A)SS + Vuex 4+ Vite')
+RouterLink(to='/') HOME
+RouterLink(to='/about') ABOUT
+RouterView
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "App",
-  components: {
-    HelloWorld,
-  },
+  name: 'App',
 });
 </script>
 

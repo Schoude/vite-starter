@@ -1,4 +1,4 @@
-import { RootState } from './index';
+import { RootState } from '../index';
 import { Module } from 'vuex';
 
 interface UserState {
