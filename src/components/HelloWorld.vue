@@ -45,7 +45,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$color-code: #8f0101;
+$color-code: #b421c2;
 
 a {
   color: #7031d4;

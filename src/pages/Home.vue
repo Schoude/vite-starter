@@ -1,6 +1,8 @@
 <template lang="pug">
 section.home THIS IS HOME
-  HelloWorld(msg='Hello Vue 3 + TypeScript + Pug + S(C|A)SS + Vuex 4+ Vite')
+  HelloWorld(
+    msg='Hello Vue 3 + TypeScript + Pug + S(C|A)SS + Vuex 4 + Vue Router 4 + Vite'
+  )
 </template>
 
 <script lang="ts">

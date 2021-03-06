@@ -1,7 +1,8 @@
 <template lang="pug">
+nav
+  RouterLink(to='/') HOME
+  RouterLink(to='/about') ABOUT
 img(alt='Vue logo', src='./assets/logo.png')
-RouterLink(to='/') HOME
-RouterLink(to='/about') ABOUT
 RouterView
 </template>
 
@@ -19,7 +20,18 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #132333;
-  margin-top: 60px;
+
+  img {
+    display: inline;
+  }
+}
+
+nav {
+  background-color: #333;
+  padding: 1em 0;
+
+  * + * {
+    margin-left: 1em;
+  }
 }
 </style>
