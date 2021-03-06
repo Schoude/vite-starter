@@ -28,7 +28,10 @@ export default defineComponent({
 
 nav {
   background-color: #333;
-  padding: 1em 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   * + * {
     margin-left: 1em;

@@ -2,18 +2,19 @@
 h1 {{ msg }}
 section
   label This is a section
-  h2 User: {{ userName }}
+  h2 User: {{ user.username }}
   // button(@click='$store.dispatch("increment")') Increment count
-  // div count {{ $store.state.count }}
-  button(@click='inc') Increment count
-  div storeCount {{ storeCount }}
+  //- // div count {{ $store.state.count }}
+  //- button(@click='inc') Increment count
+  //- div storeCount {{ storeCount }}
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, reactive, computed } from "vue";
-import { useStore } from "../store";
+import { ref, defineComponent, reactive, computed } from 'vue';
+import { useStore, key } from '../store';
+
 export default defineComponent({
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
     msg: {
       type: String,
@@ -24,21 +25,21 @@ export default defineComponent({
     const store = useStore();
 
     const count = ref(0);
-    const user = reactive({ username: "Marc" });
-    const inc = () => store.dispatch("increment");
-    const storeCount = computed(() => store.state.count);
-    const userName = computed(() => store.getters["userModule/getUsername"]);
+    const user = reactive({ username: 'Marc' });
+    // const inc = () => store.dispatch('increment');
+    // const storeCount = computed(() => store.state.count);
+    // const userName = computed(() => store.getters['userModule/getUsername']);
 
-    setTimeout(() => {
-      store.dispatch("userModule/setUsername", "MEDDLER");
-    }, 3000);
+    // setTimeout(() => {
+    //   store.dispatch("userModule/setUsername", "MEDDLER");
+    // }, 3000);
 
     return {
       count,
       user,
-      inc,
-      storeCount,
-      userName,
+      // inc,
+      // storeCount,
+      // userName,
     };
   },
 });
