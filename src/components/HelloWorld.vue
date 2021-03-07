@@ -12,7 +12,6 @@ section
 
 <script lang="ts">
 import { ref, defineComponent, reactive, computed } from 'vue';
-import { useStore, key } from '../store';
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -23,24 +22,12 @@ export default defineComponent({
     },
   },
   setup: () => {
-    // const store = useStore();
-
     const count = ref(0);
     const user = reactive({ username: 'Marc' });
-    // const inc = () => store.dispatch('increment');
-    // const storeCount = computed(() => store.state.count);
-    // const userName = computed(() => store.getters['userModule/getUsername']);
-
-    // setTimeout(() => {
-    //   store.dispatch('userModule/setUsername', 'MEDDLER');
-    // }, 3000);
 
     return {
       count,
       user,
-      // inc,
-      // storeCount,
-      // userName,
     };
   },
 });
