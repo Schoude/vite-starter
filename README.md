@@ -1,14 +1,21 @@
-# Vue 3 + Typescript + Vite
+# Vue 3 + Typescript + Pug + S(C|A)SS + Vue Router 4 + Vite
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
+## Setup
+
+Install dependencies `npm install`
+
+### Scripts
+
+1. Dev Server `npm run dev`
+2. Build App `npm run build`
+3. Preview built App `npm run serve`
+4. Run tests once `npm run test:unit`
+5. Run tests in watch mode `npm run test:unit-watch`
 
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
-
-### If Using `<script setup>`
-
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
 
 ## Type Support For `.vue` Imports in TS
 
