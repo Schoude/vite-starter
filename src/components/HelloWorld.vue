@@ -3,11 +3,8 @@ h1 {{ msg }}
 section
   label This is a section
   h2 User: {{ user.username }}
-  // button(@click='$store.dispatch("increment")') Increment count
-  // div count {{ $store.state.count }}
-  //- h2 User: {{ userName }}
-  //- button(@click='inc') Increment count
-  //- div storeCount {{ storeCount }}
+  button(@click='increment') Increment Count
+  div count {{ count }}
 </template>
 
 <script lang="ts">
@@ -25,9 +22,14 @@ export default defineComponent({
     const count = ref(0);
     const user = reactive({ username: 'Marc' });
 
+    function increment() {
+      count.value++;
+    }
+
     return {
       count,
       user,
+      increment,
     };
   },
 });
