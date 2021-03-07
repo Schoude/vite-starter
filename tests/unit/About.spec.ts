@@ -1,6 +1,6 @@
-import { mount, config } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import About from '../../src/pages/About.vue';
-import type { VueRouterMock } from 'vue-router-mock';
+import { VueRouterMock } from 'vue-router-mock';
 
 describe('About', () => {
   it("has a button to navigate to the 'home' route", async () => {

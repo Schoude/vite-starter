@@ -4,7 +4,8 @@ section
   label This is a section
   h2 User: {{ user.username }}
   // button(@click='$store.dispatch("increment")') Increment count
-  //- // div count {{ $store.state.count }}
+  // div count {{ $store.state.count }}
+  //- h2 User: {{ userName }}
   //- button(@click='inc') Increment count
   //- div storeCount {{ storeCount }}
 </template>
@@ -22,7 +23,7 @@ export default defineComponent({
     },
   },
   setup: () => {
-    const store = useStore();
+    // const store = useStore();
 
     const count = ref(0);
     const user = reactive({ username: 'Marc' });
@@ -31,7 +32,7 @@ export default defineComponent({
     // const userName = computed(() => store.getters['userModule/getUsername']);
 
     // setTimeout(() => {
-    //   store.dispatch("userModule/setUsername", "MEDDLER");
+    //   store.dispatch('userModule/setUsername', 'MEDDLER');
     // }, 3000);
 
     return {

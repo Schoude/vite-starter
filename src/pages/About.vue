@@ -25,16 +25,4 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-button {
-  padding: 0.5em 1em;
-  border: 1px solid whitesmoke;
-  transition: background-color 0.2s ease;
-  outline: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: rgba(245, 245, 245, 0.12);
-  }
-}
 </style>
