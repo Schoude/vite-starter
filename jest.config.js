@@ -26,4 +26,5 @@ module.exports = {
     '!**/coverage/**',
   ],
   coverageReporters: [/*'json',*/ 'lcov', 'text' /*'clover'*/],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
