@@ -2,12 +2,16 @@
 h1 {{ msg }}
 section
   label This is a section
-  h2 User: {{ user.username }}
-  button(@click='incLocalCount') Increment local count
-  div count {{ count }}
-  h2 User: {{ userName }}
-  button(@click='inc') Increment count
-  div storeCount {{ storeCount }}
+  .wrapper
+    h2 Local State
+    h3 User: {{ user.username }}
+    button(@click='incLocalCount') Increment local count
+    div count {{ count }}
+  .wrapper
+    h2 Vuex State
+    h3 Store User: {{ userName }}
+    button(@click='inc') Increment count
+    div storeCount {{ storeCount }}
 </template>
 
 <script lang="ts">
@@ -51,20 +55,13 @@ export default defineComponent({
 <style lang="scss" scoped>
 $color-code: #b421c2;
 
-a {
-  color: #7031d4;
+.wrapper {
+  margin-top: 2em;
 }
 
 label {
   margin: 0 0.5em;
   font-weight: bold;
-  color: $color-code;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
   color: $color-code;
 }
 </style>
