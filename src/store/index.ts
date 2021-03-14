@@ -25,8 +25,6 @@ export const store = createStore<RootState>({
   },
 });
 
-// store.registerModule('user_module', userModule);
-
 // define own `useStore` composition function with integrated key
 export function useStore() {
   return baseUseStore(key);

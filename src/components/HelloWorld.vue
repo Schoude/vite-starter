@@ -1,17 +1,17 @@
 <template lang="pug">
 h1 {{ msg }}
 section
-  label This is a section
+  label This is a section with my MSG: {{ msg }}
   .wrapper
     h2 Local State
-    h3 User: {{ user.username }}
-    button(@click='incLocalCount') Increment local count
-    div count {{ count }}
+    h3.username-local User: {{ user.username }}
+    button.local-increment(@click='incLocalCount') Increment local count
+    .count-local count {{ count }}
   .wrapper
     h2 Vuex State
-    h3 Store User: {{ userName }}
-    button(@click='inc') Increment count
-    div storeCount {{ storeCount }}
+    h3.username-store Store User: {{ userName }}
+    button.action-increment(@click='inc') Increment count
+    .count-store storeCount {{ storeCount }}
 </template>
 
 <script lang="ts">
@@ -35,10 +35,6 @@ export default defineComponent({
     const inc = () => store.dispatch('increment');
     const storeCount = computed(() => store.state.count);
     const userName = computed(() => store.getters['userModule/getUsername']);
-
-    setTimeout(() => {
-      store.dispatch('userModule/setUsername', 'MEDDLER');
-    }, 3000);
 
     return {
       count,
