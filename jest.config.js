@@ -19,12 +19,10 @@ module.exports = {
     // "**/src/**/*.{ts,vue}",
     // "**/tests/**/*.{ts,vue}",
     '**/src/components/**/*.{ts,vue}',
-    '**/src/views/**/*.{ts,vue}',
-    '!**/src/views/Examples.vue',
+    '!**/src/pages/**/*.{ts,vue}',
     '!**/node_modules/**',
     '!**/dist/**',
     '!**/coverage/**',
   ],
   coverageReporters: [/*'json',*/ 'lcov', 'text' /*'clover'*/],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
